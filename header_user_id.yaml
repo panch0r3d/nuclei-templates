@@ -17,7 +17,7 @@ requests:
     matchers:
       - type: regex
         regex:
-          - "(uuid|user|username|uname)"
+          - "(uuid|user|username|uname|client|name|secret|md5|account)"
         part: header
       - type: status
         status:
@@ -28,4 +28,4 @@ requests:
       - type: regex
         part: header
         regex:
-          - '(uuid|user|username|uname).*?[\r\n]'
+          - '(uuid|user|username|uname|client|name|secret|md5|account).*?[\r\n]'
