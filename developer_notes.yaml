@@ -18,6 +18,7 @@ requests:
       - type: regex
         regex:
           - "<!--(.*?)-->"
+          - "/[*][*](.*?)[*][*]/"
         part: body
       - type: status
         status:
@@ -29,3 +30,5 @@ requests:
         part: body
         regex:
           - "<!--(.*?)-->"
+          - "/[*][*](.*?)[*][*]/"
+          
