@@ -7,3 +7,8 @@ Custom template files for https://github.com/projectdiscovery/nuclei
   * api_endpoints.yaml - Common api endpoints for some quick info disclosure
   * shell_scripts.yaml - Some common shell scripts
   * header_sqli.yaml - Try to trigger some SQL errors through extra SQL in the headers
+  * graphql_get.yaml - Get based graphql because I thinnk the current POST based one misses a lot
+  
+  
+Please use responsibly :) and I'd love to know if you have any luck getting bounties with these or if you have any feedback / requests.
+
