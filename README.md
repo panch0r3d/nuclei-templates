@@ -11,6 +11,7 @@ Custom template files for https://github.com/projectdiscovery/nuclei
   * artifactory_deploy.yaml - Artifactory repositories with anonymous deploy user permissions
   * header_reflection.yaml - Looks for request headers that are reflected back in the response headers 
   * header_reflection_body.yaml - Looks for request headers that are reflected back in the html body
+  * base64_strings.yaml - Extracts base 64 encoded strings from the url source (I need to find an easy way to decode it now)
   
 Please use responsibly :) and I'd love to know if you have any luck getting bounties with these or if you have any feedback / requests.
 
