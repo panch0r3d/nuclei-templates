@@ -9,7 +9,7 @@ requests:
   - method: GET
     path:
       - "{{BaseURL}}/"
-      - "{{BaseURL}}/%0d%0aset-cookie%20%3amycookie%3dCanary12345;%20%44omain%20%3d.{{Host}}"
+      - "{{BaseURL}}/%0d%0aset-cookie%20%3amycookie%3dCanary12345;%20%44omain%20%3d.{{Hostname}}"
     redirects: true
     max-redirects: 5
     headers:
