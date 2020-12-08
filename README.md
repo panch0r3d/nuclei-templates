@@ -16,3 +16,4 @@ Custom template files for https://github.com/projectdiscovery/nuclei
   
 Please use responsibly :) and I'd love to know if you have any luck getting bounties with these or if you have any feedback / requests.
 
+https://twitter.com/panch0r3d
