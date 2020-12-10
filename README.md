@@ -14,6 +14,7 @@ Custom template files for https://github.com/projectdiscovery/nuclei
   * base64_strings.yaml - Extracts base 64 encoded strings from the url source (I need to find an easy way to decode it now)
   * AEM_misconfig.yaml - Some vulnerable paths I've had luck with on older unpatched Adobe Experience Maker (AEM) sites 
   * apple_app_site.yaml - Used by IOS apps to map urls into an associated app... Can sometimes have some good endpoints
+  * firebase_urls.yaml - Finding firebase database URLs for additional testing
   
 Please use responsibly :) and I'd love to know if you have any luck getting bounties with these or if you have any feedback / requests.
 
