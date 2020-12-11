@@ -23,4 +23,5 @@ requests:
       - type: regex
         part: body
         regex:
-          - "(f|F)(i|I)(r|R)(e|E)(b|B)(a|A)(s|S)(e|E)(i|I)(o|O)[.](c|C)(o|O)(m|M).*?([\r\n]|[}]|[,][>][-][ ])"
+          - "([^]|[ ]|[:])*(f|F)(i|I)(r|R)(e|E)(b|B)(a|A)(s|S)(e|E)(i|I)(o|O)[.](c|C)(o|O)(m|M).*?([\r\n]|[}]|[,][>][-][ ])"
+          - "([^]|[ ]|[:])*(d|D)(a|A)(t|T)(a|A)(b|B)(a|A)(s|S)(e|E).*?([\r\n]|[}]|[,][>][-][ ])"
