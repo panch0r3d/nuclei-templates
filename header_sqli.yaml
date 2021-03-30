@@ -2,7 +2,7 @@ id: header-sqli
 
 info:
   name: Request header based sqli
-  author: panch0r3d
+  author: panch0r3d (Thanks https://github.com/MR-pentestGuy for all of the Regexes)
   severity: high
 
 requests:
@@ -20,12 +20,28 @@ requests:
     matchers:
       - type: regex
         regex:
-          - "(s|S)(q|Q)(l|L)"
-          - "(d|D)(a|A)(t|T)(a|A)(b|B)(a|A)(s|S)(e|E)"
+          - "(Transaction rollback|com.frontbase.jdbc|org.h2.jdbc|Unexpected end of command in statement|Unexpected token.*?in statement)"
+          - "(org.hsqldb.jdbc|CLI Driver.*?DB2|DB2 SQL error|bdb2_w+|SQLSTATE.+SQLCODE|com.ibm.db2.jcc)"
+          - "(Zend_Db_(Adapter|Statement)_Db2_Exception|DB2Exception|Warning.*?ifx_|Exception.*?Informix|Informix ODBC Driver)"
+          - "(ODBC Informix driver|com.informix.jdbc|weblogic.jdbc.informix|IfxException|Warning.*?ingres_|Ingres SQLSTATE|Ingres.*?Driver)"
+          - "(com.ingres.gcf.jdbc|Dynamic SQL Error|Warning.*?ibase_|org.firebirdsql.jdbc|Microsoft Access.*?Driver|JET Database Engine)"
+          - "(Access Database Engine|ODBC Microsoft Access|Syntax error .*?missing operator.*? in query expression|Driver.*? SQL.*? Server)"
+          - "(OLE DB.*? SQL Server|bSQL Server.*? Driver|Warning.*?(mssql|sqlsrv)_|SQL Server|System.Data.SqlClient.SqlException)"
+          - "(Exception.*?Roadhouse.Cms.|Microsoft SQL Native Client error |ODBC SQL Server Driver|ODBC Driver.*? for SQL Server)"
+          - "(SQLServer JDBC Driver|com.jnetdirect.jsql|macromedia.jdbc.sqlserver|Zend_Db_(Adapter|Statement)_Sqlsrv_Exception)"
+          - "(com.microsoft.sqlserver.jdbc|(Mssql|SqlSrv)|SQL(Srv|Server)Exception|SQL syntax.*?MySQL|Warning.*?mysqli?_)"
         part: body
     extractors:
       - type: regex
         part: body
         regex:
-          - "(s|S)(q|Q)(l|L).*?[\r\n]"
-          - "(d|D)(a|A)(t|T)(a|A)(b|B)(a|A)(s|S)(e|E).*?[\r\n]"
+          - "(Transaction rollback|com.frontbase.jdbc|org.h2.jdbc|Unexpected end of command in statement|Unexpected token.*?in statement)"
+          - "(org.hsqldb.jdbc|CLI Driver.*?DB2|DB2 SQL error|bdb2_w+|SQLSTATE.+SQLCODE|com.ibm.db2.jcc)"
+          - "(Zend_Db_(Adapter|Statement)_Db2_Exception|DB2Exception|Warning.*?ifx_|Exception.*?Informix|Informix ODBC Driver)"
+          - "(ODBC Informix driver|com.informix.jdbc|weblogic.jdbc.informix|IfxException|Warning.*?ingres_|Ingres SQLSTATE|Ingres.*?Driver)"
+          - "(com.ingres.gcf.jdbc|Dynamic SQL Error|Warning.*?ibase_|org.firebirdsql.jdbc|Microsoft Access.*?Driver|JET Database Engine)"
+          - "(Access Database Engine|ODBC Microsoft Access|Syntax error .*?missing operator.*? in query expression|Driver.*? SQL.*? Server)"
+          - "(OLE DB.*? SQL Server|bSQL Server.*? Driver|Warning.*?(mssql|sqlsrv)_|SQL Server|System.Data.SqlClient.SqlException)"
+          - "(Exception.*?Roadhouse.Cms.|Microsoft SQL Native Client error |ODBC SQL Server Driver|ODBC Driver.*? for SQL Server)"
+          - "(SQLServer JDBC Driver|com.jnetdirect.jsql|macromedia.jdbc.sqlserver|Zend_Db_(Adapter|Statement)_Sqlsrv_Exception)"
+          - "(com.microsoft.sqlserver.jdbc|(Mssql|SqlSrv)|SQL(Srv|Server)Exception|SQL syntax.*?MySQL|Warning.*?mysqli?_)"
