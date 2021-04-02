@@ -8,9 +8,9 @@ info:
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}/.build.sh
-      - "{{BaseURL}}/.jenkins.sh
-      - "{{BaseURL}}/.travis.sh
+      - "{{BaseURL}}/.build.sh"
+      - "{{BaseURL}}/.jenkins.sh"
+      - "{{BaseURL}}/.travis.sh"
       - "{{BaseURL}}/install.sh"
       - "{{BaseURL}}/update.sh"
       - "{{BaseURL}}/config.sh"
