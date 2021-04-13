@@ -17,6 +17,7 @@ Custom template files for https://github.com/projectdiscovery/nuclei
   * firebase_urls.yaml - Finding firebase database URLs for additional testing
   * connect-proxy.yaml - Still a work in progress but looking for open proxies using the connect method
   * email-extraction.yaml - Extract email addresses from web pages and metadata from some files like pdf 
+  * header_blind_xss.yaml - Send blind xss payloads via headers
   
 Please use responsibly :) and I'd love to know if you have any luck getting bounties with these or if you have any feedback / requests.
 
