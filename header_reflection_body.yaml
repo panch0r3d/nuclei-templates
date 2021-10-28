@@ -30,10 +30,10 @@ requests:
     matchers:
       - type: regex
         regex:
-          - ".*?(c|C)(a|A)(n|N)(a|A)(r|R)(y|Y)12345.*?"
+          - "(?i).{0,45}canary12345(?i).{0,45}"
         part: body
     extractors:
       - type: regex
         part: body
         regex:
-          - "(c|C)(a|A)(n|N)(a|A)(r|R)(y|Y)12345.*?([\r\n]|[}]|[,][>])"
+          - "(?i).{0,45}canary12345(?i).{0,45}"
